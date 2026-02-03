@@ -1,20 +1,36 @@
-# Tokoseo Landing Page
 
-Landing page HTML generik untuk UMKM Indonesia  
-Gratis, ringan, dan mudah diduplikasi.
+---
 
-## Cara Pakai
-1. Download atau clone repository
-2. Buka `index.html`
-3. Ganti placeholder seperti:
-   - SITE_NAME
-   - SITE_URL
-   - CTA_TEXT
-4. Upload ke hosting
+### Opsi 2 — Download & Upload ke Hosting
+1. Download ZIP repo ini
+2. Upload `index.html` ke hosting / domain kamu
+3. Selesai ✅
 
-## Cocok Untuk
-- UMKM
+---
+
+## ✏️ Cara Edit Konten
+Buka `index.html`, lalu edit bagian:
+- Logo & judul
+- Link sosial media
+- Link WhatsApp
+- Teks accordion
+- Warna & font (di `<style>`)
+
+Tidak perlu skill coding lanjutan.
+
+---
+
+## 🧩 Cocok Digunakan Untuk
+- Link di bio Instagram / TikTok
+- Landing page UMKM
 - Edukasi digital
-- Komunitas belajar
+- Campaign komunitas
+- Project open-source turunan
 
-Dibuat oleh PahamSEO
+---
+
+## 📜 Lisensi
+Proyek ini menggunakan **MIT License**  
+Bebas digunakan, dimodifikasi, dan dibagikan.
+
+➡️ Tetap sertakan kredit:
