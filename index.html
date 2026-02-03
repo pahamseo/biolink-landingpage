@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ================= CONFIG SEO ================= -->
+<title>{{SITE_TITLE}}</title>
+<meta name="description" content="{{SITE_DESCRIPTION}}">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="{{SITE_URL}}">
+
+<!-- OPEN GRAPH -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{SITE_TITLE}}">
+<meta property="og:description" content="{{SITE_DESCRIPTION}}">
+<meta property="og:url" content="{{SITE_URL}}">
+<meta property="og:image" content="{{SITE_LOGO}}">
+
+<!-- ================= STYLE ================= -->
+<style>
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:linear-gradient(180deg,#0d47a1,#1565c0);
+  color:#fff;
+  display:flex;
+  justify-content:center;
+  min-height:100vh;
+}
+.container{
+  width:100%;
+  max-width:420px;
+  padding:28px 18px 120px;
+  text-align:center;
+}
+
+/* LOGO */
+.logo img{
+  width:110px;
+  height:110px;
+  border-radius:50%;
+  border:3px solid #ffd600;
+  margin-bottom:14px;
+}
+
+/* HEADER */
+h1{
+  margin:8px 0 4px;
+  font-size:24px;
+  font-weight:800;
+}
+.tagline{
+  font-size:14px;
+  color:#ffeb3b;
+  margin-bottom:22px;
+}
+
+/* SOCIAL */
+.social{
+  display:flex;
+  justify-content:center;
+  gap:16px;
+  margin-bottom:16px;
+}
+.social a{
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  background:rgba(255,255,255,.15);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.social img{
+  width:22px;
+  filter:invert(1);
+}
+
+/* ACCORDION */
+.accordion{
+  background:rgba(255,255,255,.15);
+  border-radius:14px;
+  margin:16px 0;
+  overflow:hidden;
+}
+.accordion-header{
+  padding:16px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  cursor:pointer;
+  font-weight:700;
+  font-size:16px;
+  color:#ffd600;
+}
+.accordion-header span{
+  font-size:22px;
+  transition:.2s;
+}
+.accordion.active .accordion-header span{
+  transform:rotate(45deg);
+}
+.accordion-content{
+  max-height:0;
+  overflow:hidden;
+  transition:max-height .35s ease;
+  background:#fff;
+}
+.accordion.active .accordion-content{
+  max-height:800px;
+}
+
+/* STEP ITEM */
+.step-item{
+  display:flex;
+  gap:12px;
+  padding:14px;
+  text-decoration:none;
+  color:#0d47a1;
+  font-weight:700;
+  font-size:15px;
+  line-height:1.35;
+  border-bottom:1px solid #eee;
+}
+.step-item:hover{
+  background:#ffd600;
+}
+.step-num{
+  min-width:28px;
+  height:28px;
+  background:#e3f2fd;
+  border-radius:8px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:14px;
+  font-weight:800;
+}
+
+/* SINAU BOX */
+.sinau-box{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  width:100%;
+  padding:16px 20px;
+  margin:18px 0;
+  background:linear-gradient(90deg,#2f6fbf,#3f83d6);
+  border-radius:16px;
+  font-size:14px;
+  font-weight:800;
+  letter-spacing:.4px;
+  text-transform:uppercase;
+  color:#ffd600;
+  text-decoration:none;
+  box-shadow:0 6px 16px rgba(0,0,0,.25);
+}
+.sinau-box:hover{
+  background:linear-gradient(90deg,#3f83d6,#2f6fbf);
+}
+
+/* FOOTER */
+footer{
+  margin-top:22px;
+  font-size:12px;
+  color:#bbdefb;
+}
+
+/* WHATSAPP */
+.wa-float{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  width:56px;
+  height:56px;
+  background:#25D366;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 8px 20px rgba(0,0,0,.35);
+}
+.wa-float img{width:30px}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="logo">
+    <img src="{{SITE_LOGO}}" alt="{{SITE_NAME}}">
+  </div>
+
+  <h1>{{SITE_NAME}}</h1>
+  <div class="tagline">{{SITE_TAGLINE}}</div>
+
+  <div class="social">
+    <a href="{{IG_URL}}" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg"></a>
+    <a href="{{TT_URL}}" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg"></a>
+    <a href="{{YT_URL}}" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg"></a>
+  </div>
+
+  <!-- ACCORDION -->
+  <div class="accordion" id="step">
+    <div class="accordion-header" onclick="toggle('step')">
+      📢 {{ACCORDION_TITLE}}
+      <span>+</span>
+    </div>
+    <div class="accordion-content">
+      {{ACCORDION_ITEMS}}
+    </div>
+  </div>
+
+  <!-- CTA BOX -->
+  <a href="{{CTA_URL}}" target="_blank" class="sinau-box">
+    🚀 {{CTA_TEXT}}
+    <span>+</span>
+  </a>
+
+  <footer>© {{YEAR}} {{SITE_NAME}}</footer>
+</div>
+
+<a class="wa-float" href="{{WA_URL}}" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+</a>
+
+<script>
+function toggle(id){
+  document.getElementById(id).classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
